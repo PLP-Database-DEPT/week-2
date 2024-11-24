@@ -25,32 +25,10 @@ Push the code to GitHub when finished.
 
 ## Assignment Questions
 
-1. Retrieving All Data
-Write an SQL query to retrieve all columns for all the bills in the Bills table.
+1. Write an SQL query to retrieve the **customerName**,**email** and **PhoneNumbe**r from the **customer table**.
+2. Write an SQL query to retrieve the **customerName**,**email** and **PhoneNumbe**r from the **customer table**, where **customerAddress** is equal to **Kisii**
 
-2. Selecting Specific Columns
-Write an SQL query to retrieve only the Bill_ID and TotalAmount columns from the Bills table.
 
-3. Filtering Data by Amount
-Write an SQL query to retrieve all bills where the TotalAmount is greater than 100. Display the Bill_ID, TotalAmount, and Due_Date.
 
-4. Filtering Data by Status
-Write an SQL query to retrieve all bills where the Status is 'Pending'. Show the Bill_ID, Amount, Due_Date, and Status.
 
-5. Filtering Data by Date
-Write an SQL query to retrieve all bills where the Issue_Date is after '2024-01-01'. Show the Bill_ID, Amount, Issue_Date, and Due_Date.
-
-6. Combining Conditions
-Write an SQL query to retrieve all bills where the TotalAmount is greater than 50 and the Status is 'Pending'. Display the Bill_ID, TotalAmount, Status, and Due_Date.
-
-7. Sorting Data by Amount
-Write an SQL query to retrieve all bills, but sort them by TotalAmount in descending order (highest to lowest). Display Bill_ID, Amount, and Status.
-
-8. Sorting Data by Due Date
-Write an SQL query to retrieve all bills sorted by Due_Date in ascending order. Show Bill_ID, TotalAmount, Due_Date, and Status.
-
-9. Filtering and Sorting Combined
-Write an SQL query to retrieve all bills where the Status is 'Overdue', and sort the results by Due_Date in ascending order. Show the Bill_ID, TotalAmount, Due_Date, and Status.
-
-10. Finding Bills by Customer
-Write an SQL query to retrieve all bills for a specific customer, say with Customer_ID = 123. Show the Bill_ID, TotalAmount, Due_Date, and Status.
+_Ensure that your query is correctly formatted._
