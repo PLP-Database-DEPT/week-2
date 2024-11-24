@@ -34,14 +34,15 @@ jobs:
         run: |
           sudo mysql -u$DB_USER -p$DB_PASSWORD $DB_DATABASE < ./bills.sql
 
-      - name: Execute answer.sql and verify
+      - name: Execute SQL queries in answer.sql and capture output
         run: |
-          # Execute the SQL queries in answer.sql and capture any output
-          result=$(sudo mysql -u$DB_USER -p$DB_PASSWORD $DB_DATABASE < ./answer.sql)
-          if [ -z "$result" ]; then
-            echo "SQL script executed successfully!"
-          else
+          # Run the SQL queries from answer.sql and capture both standard output and errors
+          result=$(sudo mysql -u$DB_USER -p$DB_PASSWORD $DB_DATABASE < ./answer.sql 2>&1)
+          # If the result contains any error, exit with failure
+          if echo "$result" | grep -q "ERROR"; then
             echo "SQL script execution failed with errors:"
             echo "$result"
             exit 1
+          else
+            echo "SQL script executed successfully!"
           fi
